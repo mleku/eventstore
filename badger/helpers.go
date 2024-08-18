@@ -4,7 +4,7 @@ import (
 	"encoding/binary"
 	"encoding/hex"
 
-	"github.com/fiatjaf/eventstore"
+	"github.com/mleku/eventstore"
 	"github.com/nbd-wtf/go-nostr"
 	"golang.org/x/exp/slices"
 )
@@ -91,7 +91,8 @@ func getIndexKeysForEvent(evt *nostr.Event, idx []byte) [][]byte {
 			// not indexable
 			continue
 		}
-		firstIndex := slices.IndexFunc(evt.Tags, func(t nostr.Tag) bool { return len(t) >= 2 && t[1] == tag[1] })
+		firstIndex := slices.IndexFunc(evt.Tags,
+			func(t nostr.Tag) bool { return len(t) >= 2 && t[1] == tag[1] })
 		if firstIndex != i {
 			// duplicate
 			continue

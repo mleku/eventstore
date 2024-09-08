@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/dgraph-io/badger/v4"
+	"github.com/minio/sha256-simd"
 	. "nostr.mleku.dev"
 	"nostr.mleku.dev/codec/event"
 	"nostr.mleku.dev/codec/eventid"

@@ -1,11 +1,11 @@
 package eventstore
 
 import (
+	"eventstore.mleku.dev/ratel/del"
 	. "nostr.mleku.dev"
 	"nostr.mleku.dev/codec/event"
 	"nostr.mleku.dev/codec/eventid"
 	"nostr.mleku.dev/codec/filter"
-	"store.mleku.dev/ratel/del"
 )
 
 // I is an types for a persistence layer for nostr events handled by a relay.

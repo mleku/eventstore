@@ -1,4 +1,4 @@
-module store.mleku.dev
+module eventstore.mleku.dev
 
 go 1.23.0
 

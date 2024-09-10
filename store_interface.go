@@ -1,7 +1,6 @@
 package eventstore
 
 import (
-	"eventstore.mleku.dev/ratel/del"
 	. "nostr.mleku.dev"
 	"nostr.mleku.dev/codec/event"
 	"nostr.mleku.dev/codec/eventid"
@@ -32,12 +31,4 @@ type I interface {
 	DeleteEvent(c Ctx, ev *eventid.T) (err E)
 	// SaveEvent is called once Relay.AcceptEvent reports true.
 	SaveEvent(c Ctx, ev *event.T) (err E)
-}
-
-// Cache is a sketch of an expanded enveloper that might be used for a size-constrained event
-// store.
-type Cache interface {
-	I
-	GCCount() (deleteItems del.Items, err E)
-	Delete(serials del.Items) (err E)
 }

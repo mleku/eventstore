@@ -3,7 +3,7 @@ module store.mleku.dev
 go 1.23.1
 
 require (
-	nostr.mleku.dev v1.0.14
+	nostr.mleku.dev v1.0.15
 	util.mleku.dev v1.0.5
 )
 

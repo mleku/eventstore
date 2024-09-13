@@ -4,7 +4,7 @@ go 1.23.1
 
 require (
 	nostr.mleku.dev v1.0.14
-	util.mleku.dev v1.0.4
+	util.mleku.dev v1.0.5
 )
 
 require (
